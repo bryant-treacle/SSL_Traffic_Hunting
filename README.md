@@ -13,7 +13,7 @@ This script will add additional analytics and visualizations for JA3 SSL hashes 
 ## Installation:
     This script contains all necessary additional deb packages required for STIG compliance.  
     1. Download or Clone the Repo
-    2. If download unzip using *unzip JA3_SSL_Analysis*
+    2. If download unzip using- unzip JA3_SSL_Analysis 
     3. cd JA3_SSL_Analysis
     4. sudo chmod 755 install.sh
     5. sudo ./install.sh
