@@ -2,10 +2,11 @@
 This script will add additional analytics and visualizations for JA3 SSL hashes to Security Onion 16.04.x  
 
 ####     Adds addtional Meta-data to JA3 Client Hash by including a lookup table in Bro
+![alt text](https://github.com/bryant-treacle/Repository_images/blob/master/JA3_Freq_Analysis.png)
 ![alt text](https://github.com/bryant-treacle/Repository_images/blob/master/JA3_Client_Hashes.png)
 
 ####     Adds a blacklist of known malicious SSL JA3 hashes from https://sslbl.abuse.ch to the Zeek/Bro Intel framework.
-![alt text](https://github.com/bryant-treacle/Repository_images/blob/master/JA3_Freq_Analysis.png)
+![alt text](https://github.com/bryant-treacle/Repository_images/blob/master/JA3_Baseline_%26_Intel.png)
 
 
 ## Usage:
