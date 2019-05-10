@@ -6,6 +6,7 @@ This script will add additional analytics and visualizations for JA3 SSL hashes 
 ![alt text](https://github.com/bryant-treacle/Repository_images/blob/master/JA3_Client_Hashes.png)
 
 ####     Adds a blacklist of known malicious SSL JA3 hashes from https://sslbl.abuse.ch to the Zeek/Bro Intel framework.
+![alt text](https://github.com/bryant-treacle/Repository_images/blob/master/JA3_Intel.png)
 ![alt text](https://github.com/bryant-treacle/Repository_images/blob/master/JA3_Baseline_%26_Intel.png)
 
 
