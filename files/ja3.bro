@@ -49,7 +49,7 @@ type Val: record {
 global ja3_lookup_table: table[string] of Val = table();
 #global ja3_lookup_table: table[string] of string;
 event bro_init() {
-	Input::add_table([$source="/opt/bro/share/bro/ja3/ja3_lookup.txt", $name="ja3_stream", $idx=Idx, $val=Val, $destination=ja3_lookup_table]);
+	Input::add_table([$source="/opt/bro/share/bro/ja3/ja3_lookup.dat", $name="ja3_stream", $idx=Idx, $val=Val, $destination=ja3_lookup_table]);
 	Input::remove("ja3_stream");
 }
 event Input::end_of_data(name: string, source: string) {
