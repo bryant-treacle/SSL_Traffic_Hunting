@@ -26,6 +26,7 @@ JA3_intel()
 {
 echo "Updating JA3.bro to include a lookup_table for JA3 Client Hashses."
 cp files/ja3.bro /opt/bro/share/bro/ja3/
+cp files/ja3_lookup.dat /opt/bro/share/bro/ja3/
 
 echo "Updating logstash-template in /etc/logstash to include additional field mappings."
 cp files/logstash-template.json /etc/logstash
