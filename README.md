@@ -20,6 +20,13 @@ This script will add additional analytics and visualizations for JA3 SSL hashes 
     
 ##### Note: A new field call JA3_desc will be added to the bro ssl.log file and will need to be mapped in Elasticsearch.  The script already adds the mapping to the logstash-template.json file, but Logstash will need to be restarted for the mappings to take effect.  This will cause a loss of logs while Logstash reinitializes! 
 
-## Adding Kibana Dashboards
+## Adding Kibana Dashboards:
 ##### After Logstash has been restarted and initialized, Update the mappings in Kibana by selecting the Management link on the left pane then Index Patterns. In the filter type "ja3" then press enter.  If ja3_desc and ja3_desc.keyword do not appear press the refresh icon in the top right corner of the screen located next to the trash can icon.  If those fields do not appear, you may need to wait until the new daily index is created.  
 ##### Additional Kibana dashboards have been provided in the visualizations folder and can be imported in Kibana by selecting Management from the left pane then Saved Objects.  Select the Import icon in the top right of the screen and navigate to the JA3_Dashboard.json file.  Once the dashboard has been imported, Kibana will need to reinitialize and will be unresponsive for a minute or two.  
+
+## ja3er_lookup.sh:
+##### This scipt can be used to check your unknown ja3 hashes against an online repository.  
+    usage: ja3er_lookup.sh [input file] [output file]
+    inputfile - A list of ja3 hashes (1 per line)
+    outputfile - The name and location you want the output to be saved to
+    
