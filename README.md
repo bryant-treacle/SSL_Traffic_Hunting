@@ -24,6 +24,17 @@ This script will add additional analytics and visualizations for JA3 SSL hashes 
 ##### After Logstash has been restarted and initialized, Update the mappings in Kibana by selecting the Management link on the left pane then Index Patterns. In the filter type "ja3" then press enter.  If ja3_desc and ja3_desc.keyword do not appear press the refresh icon in the top right corner of the screen located next to the trash can icon.  If those fields do not appear, you may need to wait until the new daily index is created.  
 ##### Additional Kibana dashboards have been provided in the visualizations folder and can be imported in Kibana by selecting Management from the left pane then Saved Objects.  Select the Import icon in the top right of the screen and navigate to the JA3_Dashboard.json file.  Once the dashboard has been imported, Kibana will need to reinitialize and will be unresponsive for a minute or two.  
 
+## Elastalert rule for known bad ja3 hashes
+##### An Elastalert blacklist rule has been created based on the known malicous JA3 hashes located in the sslbl.abuse.ch/ja3-fingerprints/ Database.  This rule has the same effect as adding the list to the Bro intel.dat file, but may be easier to manage/deploy over a large sensor grid.  To use the blacklist, copy the following files to the /etc/elastalert/rules folder:  
+    - ja3_known_bad_blacklist.yaml
+    - ja3_known_bad_blacklist.txt
+##### Note: To add additional hashes to the blacklist append the hash to the bottom of the ja3_known_bad_blacklist.txt file.    
+
+## Elastalsert rule for whitelisting client JA3 Hashes
+##### An Elastalert whitelist rule has been provied to help baseline(whitelist) the known GOOD client JA3 hashes.  This technique is great for detecting anomolies on SSL traffic within your organization.  To use the whitelist, add all known good hashes to the ja3_baseline_whitelist.txt file, and move following files to the /etc/elastalert/rules folder: 
+    - ja3_baseline_whitelist.yaml
+    - ja3_baseline_whitelist.txt
+
 ## ja3er_lookup.sh:
 ##### This scipt can be used to check your unknown ja3 hashes against an online repository.  
     usage: ja3er_lookup.sh [input file] [output file]
