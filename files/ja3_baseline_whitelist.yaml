@@ -1,0 +1,44 @@
+# Elasticsearch Host
+es_host: elasticsearch
+es_port: 9200
+
+# (Required)
+# Rule name, must be unique
+name: ja3_baseline_whitelist
+
+# (Required)
+# Index to search, wildcard supported
+index: "*:logstash-*"
+
+# (Required)
+# Type of alert.
+# The Whitelist rule will check a certain field against a whitelist and match if it is not in the whitelist
+type: whitelist
+
+# (Required, wlacklist)
+# The name of the field to use to compare to the wlacklist. If the field is null, those events will be ignored.
+compare_key: ja3
+
+# (Required, whitelist)
+# A list of whitelisted values, and/or a list of paths to flat files which contain the whitelisted values
+whitelist:
+    - "!file /etc/elastalert/rules/ja3_baseline_whitelist.txt"
+
+# (Required, whitelist)
+# ignore_null: If true, events without a compare_key field will not match.
+ignore_null: true
+
+#(Required)
+# A list of Elasticsearch filters used for find events
+# These filters are joined with AND and nested in a filtered query
+# For more info: http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/query$
+filter:
+
+- term:
+    event_type: "bro_ssl"
+
+# (Required)
+# The alert is use when a match is found
+alert:
+- debug
+
