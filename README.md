@@ -31,7 +31,7 @@ This script will add additional analytics and visualizations for JA3 SSL hashes 
 ##### Note: To add additional hashes to the blacklist append the hash to the bottom of the ja3_known_bad_blacklist.txt file.    
 
 ## Elastalsert rule for whitelisting client JA3 Hashes
-##### An Elastalert whitelist rule has been provied to help baseline(whitelist) the known GOOD client JA3 hashes.  This technique is great for detecting anomolies on SSL traffic within your organization.  To use the whitelist, add all known good hashes to the ja3_baseline_whitelist.txt file, and move following files to the /etc/elastalert/rules folder: 
+##### An Elastalert whitelist rule has been provied to help baseline(whitelist) the known GOOD client JA3 hashes.  This technique is great for detecting anomolies in SSL traffic within your organization.  To use the whitelist, add all known good hashes to the ja3_baseline_whitelist.txt file, and move following files to the /etc/elastalert/rules folder: 
     - ja3_baseline_whitelist.yaml
     - ja3_baseline_whitelist.txt
 
