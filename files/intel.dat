@@ -1,8 +1,3 @@
-#fields	indicator	indicator_type	meta.source	meta.do_notice
-# EXAMPLES:
-#66.32.119.38	Intel::ADDR	Test Address	T
-#www.honeynet.org	Intel::DOMAIN	Test Domain	T
-#4285358dd748ef74cb8161108e11cb73	Intel::FILE_HASH	Test MD5	T
 # JA3 Blacklist found at https://sslbl.abuse.ch/ja3-fingerprints/ on May 8, 2019
 1be3ecebe5aa9d3654e6e703d81f6928	Intel::JA3	Ransomware.Troldes	T
 c5235d3a8b9934b7fbbd204d50bc058d	Intel::JA3	Gootkit	T
@@ -71,4 +66,4 @@ b90bdbe961a648f0427db21aaa6ccb59        Intel::JA3      Tofsee  T
 906004246f3ba5e755b043c057254a29        Intel::JA3      Tofsee  T
 57f3642b4e37e28f5cbe3020c9331b4c        Intel::JA3      Gozi    T
 2d8794cb7b52b777bee2695e79c15760	Intel::JA3	Ransomware	T
-
+294b2f1dc22c6e6c3231d2fe311d504b	Intel::JA3	Metasploit_Reverse_HTTPS	T
