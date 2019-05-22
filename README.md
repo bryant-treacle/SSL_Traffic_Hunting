@@ -21,8 +21,8 @@ This script will add additional analytics and visualizations for JA3 SSL hashes 
 ## Installation:
     This script is designed to be applied to Security Onion 16.04.5.x and above.  
     1. Download or Clone the Repo
-    2. If download unzip using- unzip JA3_SSL_Analysis.zip 
-    3. cd JA3_SSL_Analysis
+    2. If download unzip using- unzip SSL_Traffic_Hunting-master.zip 
+    3. cd SSL_Traffic_Hunting-master
     4. sudo chmod 755 install.sh
     5. sudo ./install.sh
     
