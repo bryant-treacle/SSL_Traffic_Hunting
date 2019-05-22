@@ -1,4 +1,12 @@
-# JA3 SSL Analysis
+# SSL Traffic Hunting 
+##### This Repo contains several scripts that helps you identify malicious SSL Traffic in Security Onion 16.04.x.  Below is a description of the different tools.
+    1. JA3_SSL_Analysis
+    2. ELastalert JA3 Blacklist for Know bad JA3 Hashes
+    3. Elastalert JA3 Whitelist to identify Hashes that deviate from Baseline
+    4. ssl_cn_to_dns_lookup.py
+    5. ja3er_lookup.sh
+
+## JA3 SSL Analysis
 This script will add additional analytics and visualizations for JA3 SSL hashes to Security Onion 16.04.x  
 
 ####     Adds additional Meta-data to JA3 Client Hash by including a lookup table in Bro
@@ -34,6 +42,12 @@ This script will add additional analytics and visualizations for JA3 SSL hashes 
 ##### An Elastalert whitelist rule has been provied to help baseline(whitelist) the known GOOD client JA3 hashes.  This technique is great for detecting anomolies in SSL traffic within your organization.  To use the whitelist, add all known good hashes to the ja3_baseline_whitelist.txt file, and move following files to the /etc/elastalert/rules folder: 
     - ja3_baseline_whitelist.yaml
     - ja3_baseline_whitelist.txt
+
+## ssl_cn_to_dns_lookup.py
+##### This script will take the value of the certificate common name and queries elasticsearch for a dns query that matches the Parent + Top Level Domain ie. google.com.  Although rfc 5280 Internet X.509 Public Key Infrastructure Certificate and Certificate Revocation List (CRL) Profile only requires a string, the overwhelming best business practice by the internet CA's is to place the FQDN server name in that field. Example (.iot.us-east-1.amazonaws.com). Many malicous payloads use Domain Generating Algorithms (DGAs) or throw-away domains as their C2 and either randomly generate a values for this field (Metasploit) or continue using the same certificate that was registered against a previous domain.
+
+##### This script is meant to be ran continually and can be set as a cron job to start at reboot with normal user privilages.  It must reside on the Master if no Storage Nodes are utilized or ONLY the Storage Nodes if utilized.  It will write the results to Elasticsearch and will be visible in the Bro Notices dashboard with the following notice type: SSL::No_DNS_Query_for_Cert_CN.
+    useage: python ssl_cn_to_dns_lookup.py
 
 ## ja3er_lookup.sh:
 ##### This scipt can be used to check your unknown ja3 hashes against an online repository.  
