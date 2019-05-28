@@ -46,6 +46,12 @@ This script will add additional analytics and visualizations for JA3 SSL hashes 
 ## ssl_cn_to_dns_lookup.py
 ##### This script will take the value of the certificate common name and queries elasticsearch for a dns query that matches the Parent + Top Level Domain ie. google.com.  Although rfc 5280 Internet X.509 Public Key Infrastructure Certificate and Certificate Revocation List (CRL) Profile only requires a string, the overwhelming best business practice by the internet CA's is to place the FQDN server name in that field. Example (.iot.us-east-1.amazonaws.com). Many malicous payloads use Domain Generating Algorithms (DGAs) or throw-away domains as their C2 and either randomly generate a values for this field (Metasploit) or continue using the same certificate that was registered against a previous domain.
 
+##### Prerequisites
+    This script requires the elasticsearch python client to be installed.  Below are the instructions.
+    1. curl "https://bootstrap.pypa.io/get-pip.py" -o "get-pip.py"
+    2. sudo python get-pip.py
+    3. pip install elasticsearch
+
 ##### This script is meant to be ran continually and can be set as a cron job to start at reboot with normal user privilages.  It must reside on the Master if no Storage Nodes are utilized or ONLY the Storage Nodes if utilized.  It will write the results to Elasticsearch and will be visible in the Bro Notices dashboard with the following notice type: SSL::No_DNS_Query_for_Cert_CN.
     useage: python ssl_cn_to_dns_lookup.py
 
