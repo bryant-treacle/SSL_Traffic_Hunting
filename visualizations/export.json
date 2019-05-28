@@ -1,0 +1,43 @@
+[
+  {
+    "_id": "7317ab80-71d3-11e9-afc3-aff215d12d66",
+    "_type": "dashboard",
+    "_source": {
+      "title": "SSL - JA3",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"embeddableConfig\":{},\"gridData\":{\"x\":8,\"y\":0,\"w\":25,\"h\":10,\"i\":\"2\"},\"id\":\"bc33b880-71bb-11e9-afc3-aff215d12d66\",\"panelIndex\":\"2\",\"type\":\"visualization\",\"version\":\"6.5.4\"},{\"embeddableConfig\":{},\"gridData\":{\"x\":8,\"y\":10,\"w\":25,\"h\":9,\"i\":\"3\"},\"id\":\"98412520-71bb-11e9-afc3-aff215d12d66\",\"panelIndex\":\"3\",\"type\":\"visualization\",\"version\":\"6.5.4\"},{\"embeddableConfig\":{},\"gridData\":{\"x\":24,\"y\":46,\"w\":24,\"h\":20,\"i\":\"5\"},\"id\":\"598f2be0-71c2-11e9-afc3-aff215d12d66\",\"panelIndex\":\"5\",\"type\":\"visualization\",\"version\":\"6.5.4\"},{\"embeddableConfig\":{},\"gridData\":{\"x\":0,\"y\":46,\"w\":24,\"h\":20,\"i\":\"6\"},\"id\":\"89c37500-71b8-11e9-afc3-aff215d12d66\",\"panelIndex\":\"6\",\"type\":\"visualization\",\"version\":\"6.5.4\"},{\"embeddableConfig\":{},\"gridData\":{\"x\":0,\"y\":0,\"w\":8,\"h\":46,\"i\":\"7\"},\"id\":\"b3b449d0-3429-11e7-9d52-4f090484f59e\",\"panelIndex\":\"7\",\"type\":\"visualization\",\"version\":\"6.5.4\"},{\"embeddableConfig\":{},\"gridData\":{\"x\":33,\"y\":0,\"w\":15,\"h\":19,\"i\":\"8\"},\"id\":\"88d545a0-71d2-11e9-afc3-aff215d12d66\",\"panelIndex\":\"8\",\"type\":\"visualization\",\"version\":\"6.5.4\"},{\"gridData\":{\"x\":0,\"y\":66,\"w\":48,\"h\":26,\"i\":\"9\"},\"version\":\"6.5.4\",\"panelIndex\":\"9\",\"type\":\"search\",\"id\":\"c8f21de0-342e-11e7-9e93-53b62e1857b2\",\"embeddableConfig\":{}},{\"gridData\":{\"x\":8,\"y\":33,\"w\":40,\"h\":13,\"i\":\"10\"},\"version\":\"6.7.2\",\"panelIndex\":\"10\",\"type\":\"visualization\",\"id\":\"53325af0-8195-11e9-a217-716f4e34ae45\",\"embeddableConfig\":{}},{\"gridData\":{\"x\":8,\"y\":19,\"w\":40,\"h\":14,\"i\":\"11\"},\"version\":\"6.7.2\",\"panelIndex\":\"11\",\"type\":\"visualization\",\"id\":\"16ef4300-8195-11e9-a217-716f4e34ae45\",\"embeddableConfig\":{}}]",
+      "optionsJSON": "{\"darkTheme\":true,\"hidePanelTitles\":false,\"useMargins\":true}",
+      "version": 1,
+      "timeRestore": false,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "c8f21de0-342e-11e7-9e93-53b62e1857b2",
+    "_type": "search",
+    "_source": {
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "hits": 0,
+      "description": "",
+      "title": "SSL - Logs",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"*:logstash-*\",\"highlightAll\":true,\"version\":true,\"filter\":[],\"query\":{\"query_string\":{\"query\":\"event_type:bro_ssl\",\"analyze_wildcard\":true}}}"
+      },
+      "columns": [
+        "source_ip",
+        "source_port",
+        "destination_ip",
+        "destination_port",
+        "uid",
+        "_id"
+      ]
+    }
+  }
+]
