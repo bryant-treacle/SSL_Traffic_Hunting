@@ -3,7 +3,7 @@
     1. JA3_SSL_Analysis
     2. ELastalert JA3 Blacklist for Know bad JA3 Hashes
     3. Elastalert JA3 Whitelist to identify Hashes that deviate from Baseline
-    4. ssl_cn_to_dns_lookup.py
+    4. ssl_cn_lookup.py
     5. ja3er_lookup.sh
 
 ## JA3 SSL Analysis
