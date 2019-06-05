@@ -53,7 +53,8 @@ This script will add additional analytics and visualizations for JA3 SSL hashes 
     3. pip install elasticsearch
 
 ##### This script is meant to be ran continually and can be set as a cron job to start at reboot with normal user privilages.  It must reside on the Master if no Storage Nodes are utilized or ONLY the Storage Nodes if utilized.  It will write the results to Elasticsearch and will be visible in the Bro Notices dashboard with the following notice type: SSL::No_DNS_Query_for_Cert_CN.
-    useage: python ssl_cn_to_dns_lookup.py
+    useage: python ssl_cn_lookup.py
+    To run in background use: nohup python ssl_cn_lookup.py &
 
 ## ja3er_lookup.sh:
 ##### This scipt can be used to check your unknown ja3 hashes against an online repository.  
