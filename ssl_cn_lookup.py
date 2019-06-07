@@ -21,7 +21,7 @@ while True:
     CN_NAME_SEARCH = elasticsearch.helpers.scan(es,
         index="*:logstash-*",
         preserve_order=True,
-        query={"query": {"bool": {"must": [{"term" : {"event_type": "bro_ssl"}}], "filter": [{ "range": {"@timestamp": {"gte": "now-8d/d", "lte": "now"}}}]}}},
+        query={"query": {"bool": {"must": [{"term" : {"event_type": "bro_ssl"}}], "filter": [{ "range": {"@timestamp": {"gte": "now-30m", "lte": "now"}}}]}}},
     )
 #Example of the returned results {u'hits': {u'hits': [{u'_source': {u'certificate_common_name': u'sls.update.microsoft.com'}}]}}, Consists of a Dictionary, nested in a list, nested in a dictionary.'''
    
@@ -88,4 +88,4 @@ while True:
                             print(SSL_SRC_IP)
                             print(SSL_TIMESTAMP)		     
                             BRO_NOTICE = es.index(index= SSL_INDEX, doc_type='doc', body={"source_port": 443, "port": 443, "host": "-", "syslog-sourceip": "127.0.0.1", "protocol": "tcp", "sub_msg": CN_NAME, "peer_description": "-", "event_type": "bro_notice", "syslog-tags": ".source.s_bro_notice", "uid": SSL_UID, "p": 443, "syslog-facility": "-", "logstash_time": 0.0, "destination_ip": SSL_DEST_IP, "destination_ips": SSL_DEST_IP, "syslog-host": "-", "note": "SSL::No_DNS_Query_for_Cert_CN", "@timestamp": SSL_TIMESTAMP, "dropped": "false", "message": "-}", "timestamp": SSL_TIMESTAMP, "tags": ["syslogng", "bro", "internal_destination", "internal_source"], "msg": "Common Name Field has no DNS query for the parent domain.", "ips": ["-","-"], "destination_port": 443, "source_ips": SSL_SRC_IP, "action": ["Notice::ACTION_LOG"], "@version": "1", "source_ip": SSL_SRC_IP, "syslog-file_name": "cn_analysis.py", "syslog-host_from": "-", "suppress_for": 3600, "syslog-priority": "notice", 'destination_geo': {'country_name': SSL_COUNTRY_NAME}})
-    time.sleep(300) 
+    time.sleep(600) 
