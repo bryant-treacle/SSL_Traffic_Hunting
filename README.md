@@ -43,7 +43,7 @@ This script will add additional analytics and visualizations for JA3 SSL hashes 
     - ja3_baseline_whitelist.yaml
     - ja3_baseline_whitelist.txt
 
-## ssl_cn_to_dns_lookup.py
+## ssl_cn_lookup.py
 ##### This script will take the value of the certificate common name and queries elasticsearch for a dns query that matches the Parent + Top Level Domain ie. google.com.  Although rfc 5280 Internet X.509 Public Key Infrastructure Certificate and Certificate Revocation List (CRL) Profile only requires a string, the overwhelming best business practice by the internet CA's is to place the FQDN server name in that field. Example (.iot.us-east-1.amazonaws.com). Many malicous payloads use Domain Generating Algorithms (DGAs) or throw-away domains as their C2 and either randomly generate a values for this field (Metasploit) or continue using the same certificate that was registered against a previous domain.
 
 ##### Prerequisites
