@@ -50,7 +50,7 @@ This script will add additional analytics and visualizations for JA3 SSL hashes 
     This script requires the elasticsearch python client to be installed.  Below are the instructions.
     1. curl "https://bootstrap.pypa.io/get-pip.py" -o "get-pip.py"
     2. sudo python get-pip.py
-    3. pip install elasticsearch
+    3. sudo pip install elasticsearch
 
 ##### This script is meant to be ran continually and can be set as a cron job to start at reboot with normal user privilages.  It must reside on the Master if no Storage Nodes are utilized or ONLY the Storage Nodes if utilized.  It will write the results to Elasticsearch and will be visible in the Bro Notices dashboard with the following notice type: SSL::No_DNS_Query_for_Cert_CN.
     useage: python ssl_cn_lookup.py
