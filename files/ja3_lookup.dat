@@ -371,7 +371,6 @@ df8bfc363eeba63ab938cb2190ccd7b7	Malware_Test_FP:rig-ek-sends-kovter-2nd-run	T
 51a7ad14509fd614c7bb3a50c4982b8c	Malware_Test_FP:sweet-orange-ek-traffic;JBifrost(from_abuse.ch);java	T
 294b2f1dc22c6e6c3231d2fe311d504b	Malware_Test_FP:trickbot:Metasploit_Reverse_HTTPS	T
 6734f37431670b3ab4292b8f60f29984	Malware_Test_FP:trickbot-infection-from-usdata.estoreseller.com;_Mozilla/5.0_(Windows_NT_6.1)_AppleWebKit/537.36_(KHTML	T
-83d60721ecc423892660e275acc4dffd  Malware_Test_TOR_Client
 d54b3eb800cbeccf99fd5d5cdcd7b5b5	Malware_Test_FP:usps-malspam-js-file-post-infection-traffic;Internet_Explorer_11.0.9600.18349;TeamViewer_10.0.47484P;Notepad++_Update_Check;Softperfect_Network_Scanner_Update_Check;Wireshark_2.0.4_Update_Check	T
 92579701f145605e9edc0b01a901c6d5	Malware_Test_FP:usps-malspam-traffic;_Adware(from_abuse.ch)	T
 3fab5d0fe3b2408c8b2251b46d3895de	Malware_Test_FP:usps-malspam-traffic-1-of-2	T
