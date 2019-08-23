@@ -61,7 +61,7 @@ while True:
 ##############################################################################################################################################
 # Search Elasticsearch bro_dns records for a query containing the Parent.TLD domain refenrenced in the CN field name of the SSL Certificate. #
 ##############################################################################################################################################
-                DNS_PARENT_DOMAIN_SEARCH = es.search(index="*:logstash-*", body={"query": {"bool": {"must": [{"wildcard" : {"query.keyword": CN_NAME_WILDCARD}}], "filter": [{ "range": {"@timestamp": {"gte": "now-7d", "lte": "now"}}}]}}}, filter_path=['hits.hits._source.uid'], size=1)
+                DNS_PARENT_DOMAIN_SEARCH = es.search(index="*:logstash-*", body={"query": {"bool": {"must": [{"wildcard" : {"query.keyword": CN_NAME_WILDCARD}}], "filter": [{ "range": {"@timestamp": {"gte": "now-1h", "lte": "now"}}}]}}}, filter_path=['hits.hits._source.uid'], size=1)
 
 # Change the list to a string and seach for the string uid.  Uid is only present in records that return a match
                 DNS_PARENT_DOMAIN_SEARCH_STR = str(DNS_PARENT_DOMAIN_SEARCH.get('hits', {}).get('hits'))
