@@ -70,7 +70,7 @@ while True:
 ##############################################################
 # Search Elasticsearch to get the UID to pass to bro_notices #
 ##############################################################
-                    SSL_SEARCH = es.search(index="*:logstash-*", body={"query": {"bool": {"must": [{"wildcard" : {"certificate_common_name": CN_NAME_WILDCARD}}], "filter": [{ "term": {"event_type": "bro_ssl"}}]}}}, size=1)
+                    SSL_SEARCH = es.search(index="*:logstash-*", body={"query": {"bool": {"must": [{"wildcard" : {"certificate_common_name": CN_NAME_WILDCARD}}], "filter": [{ "range": {"@timestamp": {"gte": "now-1h", "lte": "now"}}}]}}}, size=1)
                     SSL_SEARCH_LIST_1 = SSL_SEARCH.get('hits', {}).get('hits')
 #Convert to a sting inorder to search for the word None.  Issue: Python cannot iterate over a null value (returned as "None"
                     SSL_SEARCH_LIST_STR = str(SSL_SEARCH_LIST_1)
