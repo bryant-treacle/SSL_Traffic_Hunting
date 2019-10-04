@@ -12,12 +12,12 @@ d551fafc4f40f1dec2bb45980bfa9492	Adware__(from_abuse.ch);Google_Chrome	T
 d5169d6e19447685bf6f1af8c055d94d	AirCanada_Android_App	T
 561145462cfc7de1d6a97e93d3264786	Airmail_3	T
 f6fd83a21f9f3c5f9ff7b5c63bbc179d	Alation_Compose,"Adware__(from_abuse.ch)	T
-c235fd044abf9472b0d94382fa7e1e04  Amazon_Music  T
+c235fd044abf9472b0d94382fa7e1e04	Amazon_Music  T
 6003b52942a2e1e1ea72d802d153ec08	Amazon_Music	T
 eb149984fc9c44d85ed7f12c90d818be	Amazon_Music	T
 662fdc668dd6af994a0f903dbcf25d66	Android_App	T
-9fc6ef6efc99b933c5e2d8fcf4f68955  Android_App T
-e5b607b5862a46cab44d7bacd582b3cd  Android_App T
+9fc6ef6efc99b933c5e2d8fcf4f68955	Android_App T
+e5b607b5862a46cab44d7bacd582b3cd	Android_App T
 515601c4141e718865697050a7a1765f	Android_Google_API_Access	T
 25b72c88f837567856118febcca761e0	Android_Webkit_Thing	T
 5331a12866e19199b363f6e903381498	Android_Webkit_Thing	T
@@ -131,7 +131,7 @@ bc76a4185cc9bd4c72471620e552618c	Chrome_51.0.2704.84_4	T
 8e3eea71cb5a932031d90cc0fba581bc	Chrome_51.0.2704.84_5	T
 653924bcb1d6fd09a048a4978574e2c5	Chrome_51.0.2704.84_6	T
 1ef652ecfb8e60e771a4710166afc262	Chrome_51.0.2704.84_7	T
-ebf950a16f650142d0bbf8b663dfeb4a  Chrome_76.0.3809.132  T
+ebf950a16f650142d0bbf8b663dfeb4a	Chrome_76.0.3809.132  T
 a7f2d0376cdcfde3117bf6a8359b2ab8	Chrome_Version_49.0.2623	T
 94c485bca29d5392be53f2b8cf7f4304	Chrome_Version_60/61.0.3163;_whatsapp-malspam-1st-run	T
 d3b972883dfbd24fd20fc200ad8ab22a	Chrome_Version_61.0.3163	T
@@ -389,6 +389,7 @@ ee031b874122d97ab269e0d8740be31a	Metasploit_HeartBleed_Scanner	T
 bd0bf25947d4a37404f0424edf4db9ad	Microsoft BITS/7.8	T
 bedb7e0ff43a24272eb0a41993c65faf	Microsoft_Smartscreen	T
 48cf5fb702315efbfc88ee3c8c94c6cb	Microsoft_Windows_Socket_(Tested:_Windows_10)	T
+d0ec4b50a944b182fc10ff51f883ccf7	MIcrosoft_Connected_User_Experience_&_Telemetry	T
 4d01f8b1afc22e138127611b62f1e6ec	mitmproxy	T
 8ef6a005eae3d51b652ffe41984f8869	mitmproxy	T
 11e1137464a4343105031631d470cd92	mj12bot.com	T
@@ -600,6 +601,6 @@ de364c46b0dfc283b5e38c79ceae3f8f	Yahoo!_Slurp_Indexer	T
 f8f5b71e02603b283e55b50d17ede861	Zite_(Android)_1_-_May_collide_with_Chrome	T
 5ae88f37a16f1b054f2edff1c8730471	Zite_(Android)_2_-_May_collide_with_Chome	T
 c2b4710c6888a5d47befe865c8e6fb19	ZwiftApp	T
-f7c565dad28f76aa23cf8f67465e7edc  Roku  T
-31e9eb1069522058eb96aba87cf5fbc4  Malware_Test:Dofoil_Web-tor8.exe  T
+f7c565dad28f76aa23cf8f67465e7edc	Roku  T
+31e9eb1069522058eb96aba87cf5fbc4	Malware_Test:Dofoil_Web-tor8.exe  T
 
